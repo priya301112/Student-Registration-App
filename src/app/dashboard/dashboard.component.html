@@ -1,0 +1,29 @@
+<table class="table table-bordered table-hover text-center">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>city</th>
+            <th>email</th>
+            <th>Action</th>
+           
+        </tr>
+    </thead>
+
+
+    <tbody>
+        <tr *ngFor="let u of userArray | paginate:{itemsPerPage:2,currentPage:p}">
+            <td>{{u.id}}</td>
+            <td>{{u.name}}</td>
+            <td>{{u.city}}</td>
+            <td>{{u.email}}</td>
+            <td>
+                <button (click)="delete(u.id)" class="btn btn-danger"><i class="bi bi-trash-fill"></i></button>&nbsp;
+                <button class="btn btn-success" (click)="update(u.id)">Update</button>
+            </td>
+        </tr>
+    </tbody>
+
+</table>
+
+<pagination-controls style="float: right;" (pageChange)="p=$event"></pagination-controls>

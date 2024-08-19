@@ -1,0 +1,36 @@
+<h1 style="text-align: center;">Student Registration Form </h1>
+
+<form  #formData="ngForm" (ngSubmit)="register(formData)">
+
+
+    <div class="form-group">
+        <label for="">UserId</label>
+        <input type="text" #id (ngModel)="id" name="id" class="form-control">
+    </div>
+    <br>
+
+    <div class="form-group">
+        <label for="">Name</label>
+        <input type="text" #name (ngModel)="name" name="name" class="form-control">
+    </div>
+    <br>
+
+    <div class="form-group">
+        <label for="">city</label>
+        <input type="text" #city (ngModel)="city" name="city" class="form-control">
+    </div>
+    <br>
+
+
+    <div class="form-group">
+        <label for="">Email</label>
+        <input type="email" #email (ngModel)="email" name="email" class="form-control">
+    </div>
+    <br>
+
+
+    <button class="btn btn-primary">Reset</button>&nbsp;&nbsp;
+    <button  class="btn btn-success" >Submit</button>
+    
+
+</form>

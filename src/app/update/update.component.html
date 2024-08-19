@@ -1,0 +1,38 @@
+<h1 style="text-align: center;">Updation Form </h1>
+
+<form  #formData="ngForm" (ngSubmit)="update(formData)" >
+
+
+    <div class="form-group">
+        <label for="">UserId</label>
+        <input type="text"  [(ngModel)]="cUser.id" name="id" class="form-control">
+    </div>
+    <br>
+
+    <div class="form-group">
+        <label for="">Name</label>
+        <input type="text" [(ngModel)]="cUser.name" name="name" class="form-control">
+    </div>
+    <br>
+
+    <div class="form-group">
+        <label for="">city</label>
+        <input type="text" [(ngModel)]="cUser.city" name="city" class="form-control">
+    </div>
+    <br>
+
+
+    <div class="form-group">
+        <label for="">Email</label>
+        <input type="email" [(ngModel)]="cUser.email" name="email" class="form-control">
+    </div>
+    <br>
+
+
+    <button class="btn btn-primary">Reset</button>&nbsp;&nbsp;
+    <button  class="btn btn-success">Update</button>
+    
+
+</form>
+
+
